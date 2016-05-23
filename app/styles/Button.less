@@ -1,0 +1,48 @@
+@import "Colors";
+@import "Helpers";
+@import "Settings";
+.button,button{
+	border:0px;
+	display:inline-block;
+    padding:15px 10px;
+    font-weight:300;
+	border-radius:@defaultBorderRadius;
+	color:white;
+  background-color: @red;
+	cursor:pointer;
+  width:148px;
+  font-size:16px;
+
+  &.disabled{
+    color:@disabled;
+    background-color:@disabledBg;
+  }
+	transition:.2s all;
+
+	&.primary{
+		background-color:@primary;
+	}
+
+	&.success{
+		background-color:@success;
+	}
+	&.alert{
+		background-color:@alert;
+	}
+
+	&:hover{
+
+		&.primary{
+			background-color:darken(@primary,10%);
+		}
+
+		&.success{
+			background-color:darken(@success,10%);
+		}
+		&.alert{
+			background-color:darken(@alert,10%);
+		}
+
+	}
+}
+
